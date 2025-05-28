@@ -7,7 +7,7 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/50 to-amber-100/30" />
 
       {/* Decorative Border Top */}
-      <div className="absolute top-0 left-0 w-full h-16 bg-repeat-x border-image-top" />
+      {/* <div className="absolute top-0 left-0 w-full h-16 bg-repeat-x border-image-top" /> */}
 
       {/* Decorative Border Bottom */}
       <div className="absolute bottom-0 left-0 w-full h-16 bg-repeat-x border-image-bottom" />
