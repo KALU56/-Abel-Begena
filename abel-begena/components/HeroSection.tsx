@@ -2,9 +2,15 @@ import Image from 'next/image';
 
 const HeroSection = () => {
   return (
-    <section className="relative bg-gradient-to-b from-amber-100 to-yellow-50 py-20 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
+    <section className="relative bg-gradient-to-b from-amber-100 to-yellow-50 py-20 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between border-decor">
       {/* Background Sun / Decorative Elements */}
       <div className="absolute inset-0 bg-gradient-to-br from-yellow-200/50 to-amber-100/30" />
+
+      {/* Decorative Border Top */}
+      <div className="absolute top-0 left-0 w-full h-16 bg-repeat-x border-image-top" />
+
+      {/* Decorative Border Bottom */}
+      <div className="absolute bottom-0 left-0 w-full h-16 bg-repeat-x border-image-bottom" />
 
       {/* Text Content */}
       <div className="relative z-10 max-w-2xl text-center md:text-left">
@@ -22,7 +28,7 @@ const HeroSection = () => {
       {/* Begena Image */}
       <div className="relative z-10 mt-10 md:mt-0 md:ml-12">
         <Image
-          src="/images/begena.png" // Replace with your actual image path
+          src="/begena1.jpeg" // Replace with your actual image path
           alt="Begena"
           width={400}
           height={600}
