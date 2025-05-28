@@ -1,8 +1,7 @@
 export default function Footer() {
   return (
-    <footer className="bg-amber-800 text-white p-4 text-center">
+    <footer className="text-center p-4 bg-yellow-200 mt-10">
       <p>&copy; {new Date().getFullYear()} Abel Begena. All rights reserved.</p>
-      <p>Email: info@abelbegena.com | Phone: +251-123-456-789</p>
     </footer>
-  );
+  )
 }

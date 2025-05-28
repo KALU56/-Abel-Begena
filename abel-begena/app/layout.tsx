@@ -1,25 +1,16 @@
-import type { Metadata } from 'next';
-import './globals.css';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import './globals.css'
+import { ReactNode } from 'react'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
 
-export const metadata: Metadata = {
-  title: 'Abel Begena - Ethiopian Music Training',
-  description: 'Learn the traditional Ethiopian begena and kirar with Abel Begena, preserving cultural heritage through expert training and instrument craftsmanship.',
-};
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-gray-100 text-gray-800">
+      <body className="bg-yellow-50 text-gray-800">
         <Header />
-        <main>{children}</main>
+        <main className="px-4 py-6 min-h-screen">{children}</main>
         <Footer />
       </body>
     </html>
-  );
+  )
 }

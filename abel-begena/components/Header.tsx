@@ -1,19 +1,29 @@
-import Link from 'next/link';
+import Image from 'next/image'
+import Link from 'next/link'
+
+const navLinks = [
+  { name: 'Home', href: '/' },
+  { name: 'About', href: '/about' },
+  { name: 'Training', href: '/training' },
+  { name: 'Instruments', href: '/instruments' },
+  { name: 'Events', href: '/events' },
+  { name: 'Contact', href: '/contact' },
+]
 
 export default function Header() {
   return (
-    <header className="bg-amber-800 text-white p-4 sticky top-0 z-10">
-      <div className="max-w-6xl mx-auto flex justify-between items-center">
-        <h1 className="text-2xl font-bold">Abel Begena</h1>
-        <nav className="space-x-4">
-          <Link href="/" className="hover:underline">Home</Link>
-          <Link href="/about" className="hover:underline">About</Link>
-          <Link href="/training" className="hover:underline">Training</Link>
-          <Link href="/instruments" className="hover:underline">Instruments</Link>
-          <Link href="/events" className="hover:underline">Events</Link>
-          <Link href="/contact" className="hover:underline">Contact</Link>
-        </nav>
+    <header className="flex items-center justify-between p-4 bg-yellow-200 shadow">
+      <div className="flex items-center gap-2">
+        <Image src="/Logo.png" alt="Abel Begena Logo" width={40} height={40} />
+        <span className="font-bold text-xl tracking-wide">Abel Begena</span>
       </div>
+      <nav className="space-x-4 text-sm font-medium">
+        {navLinks.map(link => (
+          <Link key={link.name} href={link.href} className="hover:underline hover:text-yellow-600">
+            {link.name}
+          </Link>
+        ))}
+      </nav>
     </header>
-  );
+  )
 }
