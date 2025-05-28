@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "Begena Player Training",
+    "duration": "10 months",
+    "description": "Learn to play the sacred begena, with 70% practical training focused on spiritual melodies.",
+    "type": "In-person/Online"
+  },
+  {
+    "id": 2,
+    "title": "Kirar Player Training",
+    "duration": "10 months",
+    "description": "Master the five- or six-stringed kirar for cultural and religious performances.",
+    "type": "In-person/Online"
+  },
+  {
+    "id": 3,
+    "title": "Traditional Drumming",
+    "duration": "10 months",
+    "description": "Explore the rhythms of Ethiopian kebero drumming for ceremonies and events.",
+    "type": "In-person"
+  }
+]
