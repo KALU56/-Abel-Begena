@@ -20,7 +20,7 @@ export default function Header() {
           backgroundImage: "url('/habesha-border1.png')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
-          filter: 'blur(1px) brightness(1.0)',
+          filter: 'blur(1px) brightness(0.8)',
         }}
       ></div>
 

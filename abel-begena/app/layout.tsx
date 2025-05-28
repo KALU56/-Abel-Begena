@@ -6,9 +6,9 @@ import Footer from '@/components/Footer'
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
-      <body className="bg-yellow-50 text-gray-800">
+      <body className="bg-white m-0 p-0 overflow-x-hidden">
         <Header />
-        <main className="px-4 py-6 min-h-screen">{children}</main>
+        <main className="m-0 p-0">{children}</main>
         <Footer />
       </body>
     </html>

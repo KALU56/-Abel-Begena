@@ -19,3 +19,8 @@
   height: 60px;
   transform: rotate(180deg); /* Flips the border for bottom */
 }
+@layer base {
+  * {
+    @apply m-0 p-0 box-border;
+  }
+}
