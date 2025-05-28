@@ -13,7 +13,7 @@ module.exports = {
           100: '#FFECB3',
         },
         yellow: {
-          50: '#FFFDE7',
+          // 50: '#FFFDE7',
           200: '#FFF59D',
         },
       },

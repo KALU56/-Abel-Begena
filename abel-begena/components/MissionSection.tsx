@@ -53,10 +53,13 @@ const MissionSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: card.delay }}
               viewport={{ once: true }}
-              className="bg-white/90 p-6 rounded-xl shadow-lg border border-yellow-200 hover:scale-105 transition-transform"
+              className="p-6 rounded-xl shadow-lg border border-yellow-200 hover:scale-105 transition-transform"
+              style={{
+                background: 'radial-gradient(circle at center, rgb(50, 47, 37) 40%, rgb(118, 56, 10) 100%)',
+              }}
             >
-              <h3 className="text-xl font-semibold text-amber-800 mb-2">{card.title}</h3>
-              <p className="text-gray-700 leading-relaxed">{card.text}</p>
+              <h3 className="text-xl font-semibold text-white mb-2">{card.title}</h3>
+              <p className="text-white/90 leading-relaxed">{card.text}</p>
             </motion.div>
           ))}
         </div>
