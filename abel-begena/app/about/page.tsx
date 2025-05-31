@@ -30,7 +30,7 @@ export default function AboutSection() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div className="rounded-lg overflow-hidden shadow-lg">
           <video
-            src="/videos/abel_begena1.mp4"
+            src="/abel_begena1.mp4"
             autoPlay
             muted
             loop
