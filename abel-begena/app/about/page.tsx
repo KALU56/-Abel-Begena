@@ -1,5 +1,4 @@
 'use client';
-import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
@@ -29,15 +28,16 @@ export default function AboutSection() {
       className="bg-white text-gray-800 py-20 px-4 md:px-8"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
+        {/* 📸 Image instead of video */}
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <Image
-            src="/abelbegena11.jpeg"
-            alt="Abel Begena Traditional Instrument"
-            width={600}
-            height={400}
-            className="w-full h-auto object-cover"
+          <img
+            src="/abel begena.jpeg" // Change this path to your desired image
+            alt="Begena Instrument"
+            className="w-full h-auto rounded-lg shadow-lg object-cover"
           />
         </div>
+
+        {/* 📄 Text + Audio Controls */}
         <div>
           <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-800">About Abel Begena</h2>
           <p className="text-lg text-gray-700 mb-4 leading-relaxed">
@@ -62,8 +62,8 @@ export default function AboutSection() {
             </Link>
           </div>
 
-          {/* Hidden audio element */}
-          <audio ref={audioRef} src="/audio/begena-sample.mp3" preload="auto" />
+          {/* 🎵 Updated audio element */}
+          <audio ref={audioRef} src="/abel.mp3" preload="auto" />
         </div>
       </div>
     </motion.section>

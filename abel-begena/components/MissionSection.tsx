@@ -23,27 +23,20 @@ const cards = [
 
 const MissionSection = () => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center px-6 py-20 overflow-hidden">
-      {/* 🎥 Background Video */}
-      <video
-        className="absolute inset-0 w-full h-full object-cover z-0"
-        src="/abel_begena1.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
-      />
+    <section
+      className="relative bg-fixed bg-center bg-cover min-h-screen flex items-center justify-center px-6 py-20"
+      style={{
+        backgroundImage: "url('/begena4.jpeg')",
+      }}
+    >
+      <div className="absolute inset-0 bg-black/40 z-0" />
 
-      {/* 🔲 Overlay for readability */}
-      <div className="absolute inset-0 bg-black/40 z-10" />
-
-      {/* ✨ Content */}
       <motion.div
         initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
         viewport={{ once: true }}
-        className="relative z-20 max-w-7xl w-full bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-10"
+        className="relative z-10 max-w-7xl w-full bg-white/80 backdrop-blur-md rounded-2xl shadow-2xl p-10"
       >
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-brown-900 mb-4">Our Mission</h2>
