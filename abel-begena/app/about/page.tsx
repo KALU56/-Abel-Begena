@@ -1,4 +1,5 @@
 'use client';
+import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
@@ -29,13 +30,12 @@ export default function AboutSection() {
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         <div className="rounded-lg overflow-hidden shadow-lg">
-          <video
-            src="/abel_begena1.mp4"
-            autoPlay
-            muted
-            loop
-            playsInline
-            className="w-full h-auto rounded-lg shadow-lg"
+          <Image
+            src="/abelbegena11.jpeg"
+            alt="Abel Begena Traditional Instrument"
+            width={600}
+            height={400}
+            className="w-full h-auto object-cover"
           />
         </div>
         <div>
