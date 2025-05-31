@@ -1,14 +1,14 @@
 import Link from 'next/link';
 import HeroSection from '../components/HeroSection';
-import MissionSection from '../components/MissionSection'; // ✅ Import new animated component
+import MissionSection from '../components/MissionSection';
+import AboutSection from '../app/about/page'; // ✅ Import the About section
 
 export default function Home() {
   return (
     <div className="min-h-screen">
       <HeroSection />
-      <MissionSection /> {/* ✅ Use animated mission section */}
+      <MissionSection />
 
-      {/* Call to Action */}
       <section className="bg-amber-800 text-white text-center py-16">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">
           Ready to Begin Your Journey?
@@ -23,6 +23,9 @@ export default function Home() {
           Explore Our Courses
         </Link>
       </section>
+
+      {/* ✅ About Section Appears Here */}
+      <AboutSection />
     </div>
   );
 }
