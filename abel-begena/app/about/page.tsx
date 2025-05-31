@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
@@ -25,11 +25,11 @@ export default function AboutSection() {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-white text-gray-800 py-20 px-4 md:px-8"
+      className="bg-white text-brown-800 py-20 px-4 md:px-8"
     >
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
         {/* 📸 Image instead of video */}
-        <div className="rounded-lg overflow-hidden shadow-lg">
+        <div className="rounded-lg overflow-hidden shadow-lg border-4 border-yellow-800">
           <img
             src="/abel begena.jpeg" // Change this path to your desired image
             alt="Begena Instrument"
@@ -39,24 +39,29 @@ export default function AboutSection() {
 
         {/* 📄 Text + Audio Controls */}
         <div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-amber-800">About Abel Begena</h2>
-          <p className="text-lg text-gray-700 mb-4 leading-relaxed">
-            <strong>Abel Begena</strong> is a cultural platform devoted to preserving and teaching the sacred sounds of Ethiopia's traditional instruments, especially the <span className="font-semibold text-amber-700">Begena</span> and <span className="font-semibold text-amber-700">Kirar</span>.
+          <h2 className="text-3xl md:text-4xl font-serif mb-4 text-yellow-900">
+            About Abel Begena
+          </h2>
+          <p className="text-lg mb-4 leading-relaxed">
+            <strong className="text-yellow-800">Abel Begena</strong> is a cultural platform devoted to preserving and teaching the sacred sounds of Ethiopia's traditional instruments, especially the <span className="font-semibold text-yellow-700">Begena</span> and <span className="font-semibold text-yellow-700">Kirar</span>.
           </p>
-          <p className="text-md text-gray-600 mb-4">
+          <p className="text-md text-brown-700 mb-6">
             We combine storytelling, spiritual heritage, and hands-on learning to pass down timeless musical traditions to a new generation.
           </p>
 
           <div className="flex items-center gap-4 mt-6">
             <button
               onClick={toggleAudio}
-              className="bg-amber-700 text-white px-5 py-2 rounded hover:bg-amber-800 transition"
+              className="px-5 py-2 rounded-lg text-white border-2 border-yellow-800 transition-colors"
+              style={{ backgroundColor: '#4B2E05' }} // Dark brown consistent with HeroSection
+              onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#6A3E0A')} // lighter brown hover
+              onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = '#4B2E05')}
             >
               {isPlaying ? 'Pause Preview' : 'Play Begena Sound'}
             </button>
             <Link
               href="/about"
-              className="text-amber-800 font-semibold underline hover:text-amber-900"
+              className="text-yellow-900 font-semibold underline hover:text-yellow-950"
             >
               Learn More About Us
             </Link>
