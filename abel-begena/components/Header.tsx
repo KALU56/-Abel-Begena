@@ -37,7 +37,7 @@ export default function Header() {
           <span className="font-bold text-xl">Abel Begena</span>
         </div>
 
-        {/* Desktop Nav */}
+        {/* Desktop Navigation */}
         <nav className="hidden md:flex space-x-6 font-medium text-sm">
           {navLinks.map(link => (
             <Link key={link.name} href={link.href} className="hover:text-yellow-300">
@@ -66,16 +66,19 @@ export default function Header() {
         />
       )}
 
-      {/* Styled Mobile Sidebar */}
+      {/* Sidebar with Gradient Background */}
       <aside
-        className={`fixed top-0 right-0 w-64 h-full z-50 bg-[#1c1c1c] text-white shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-64 h-full z-50 text-brown-900 shadow-lg transform transition-transform duration-300 ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
+        style={{
+          background: 'radial-gradient(circle at center, rgb(254, 252, 244) 40%, rgb(167, 77, 8))',
+        }}
       >
-        <div className="flex items-center justify-between p-4 border-b border-yellow-700">
-          <span className="text-lg font-bold text-yellow-300">Menu</span>
+        <div className="flex items-center justify-between p-4 border-b border-yellow-800">
+          <span className="text-lg font-bold text-yellow-900">Menu</span>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
-            <svg className="w-6 h-6 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
@@ -85,7 +88,7 @@ export default function Header() {
             <Link
               key={link.name}
               href={link.href}
-              className="hover:text-yellow-300"
+              className="hover:text-yellow-700"
               onClick={() => setMenuOpen(false)}
             >
               {link.name}
