@@ -66,16 +66,16 @@ export default function Header() {
         />
       )}
 
-      {/* Mobile Sidebar */}
+      {/* Styled Mobile Sidebar */}
       <aside
-        className={`fixed top-0 right-0 w-64 h-full z-50 bg-black/90 shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-64 h-full z-50 bg-[#1c1c1c] text-white shadow-lg transform transition-transform duration-300 ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
       >
-        <div className="flex items-center justify-between p-4 border-b border-white/20">
-          <span className="text-lg font-bold">Menu</span>
+        <div className="flex items-center justify-between p-4 border-b border-yellow-700">
+          <span className="text-lg font-bold text-yellow-300">Menu</span>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
-            <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-yellow-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
