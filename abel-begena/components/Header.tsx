@@ -31,13 +31,12 @@ export default function Header() {
 
       {/* Header Content */}
       <div className="relative z-10 flex items-center justify-between px-4 py-3 max-w-7xl mx-auto">
-        {/* Logo */}
         <div className="flex items-center gap-2">
           <Image src="/Logo.png" alt="Logo" width={40} height={40} />
           <span className="font-bold text-xl">Abel Begena</span>
         </div>
 
-        {/* Desktop Navigation */}
+        {/* Desktop Nav */}
         <nav className="hidden md:flex space-x-6 font-medium text-sm">
           {navLinks.map(link => (
             <Link key={link.name} href={link.href} className="hover:text-yellow-300">
@@ -46,7 +45,7 @@ export default function Header() {
           ))}
         </nav>
 
-        {/* Mobile Menu Button */}
+        {/* Mobile Button */}
         <button
           className="md:hidden text-white focus:outline-none"
           onClick={() => setMenuOpen(true)}
@@ -66,19 +65,20 @@ export default function Header() {
         />
       )}
 
-      {/* Sidebar with Gradient Background */}
+      {/* Sidebar */}
       <aside
-        className={`fixed top-0 right-0 w-64 h-full z-50 text-brown-900 shadow-lg transform transition-transform duration-300 ${
+        className={`fixed top-0 right-0 w-64 h-full z-50 shadow-lg transform transition-transform duration-300 ${
           menuOpen ? 'translate-x-0' : 'translate-x-full'
         } md:hidden`}
         style={{
-          background: 'radial-gradient(circle at center, rgb(254, 252, 244) 40%, rgb(167, 77, 8))',
+          background: 'radial-gradient(circle at center, rgb(254, 252, ) 40%, rgb(167, 77, 8))',
+          color: '#4B2E05', // Dark brown text
         }}
       >
-        <div className="flex items-center justify-between p-4 border-b border-yellow-800">
-          <span className="text-lg font-bold text-yellow-900">Menu</span>
+        <div className="flex items-center justify-between p-4 border-b" style={{ borderColor: '#8B5E3C' }}>
+          <span className="text-lg font-bold">Menu</span>
           <button onClick={() => setMenuOpen(false)} aria-label="Close menu">
-            <svg className="w-6 h-6 text-yellow-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6" fill="none" stroke="#4B2E05" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
