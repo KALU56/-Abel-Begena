@@ -1,12 +1,8 @@
 'use client';
 import { useState } from 'react';
 
-export default function ContactPage() {
-  const [form, setForm] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+export default function ContactSection() {
+  const [form, setForm] = useState({ name: '', email: '', message: '' });
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -14,14 +10,13 @@ export default function ContactPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // Here you can send form data to backend or email service
     alert('Message sent!');
     setForm({ name: '', email: '', message: '' });
   };
 
   return (
     <section
-      className="min-h-screen bg-white px-6 py-20 flex flex-col items-center justify-center"
+      className="min-h-screen bg-white px-6 pt-20 pb-32 flex flex-col items-center justify-center"
       style={{
         background: 'radial-gradient(circle at center, #FEFCF4 40%, #A74D08 100%)',
       }}

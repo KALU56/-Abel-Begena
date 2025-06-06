@@ -16,7 +16,7 @@ export default function ContactSection() {
 
   return (
     <section
-      className="min-h-screen bg-white px-6 py-20 flex flex-col items-center justify-center"
+      className="min-h-screen bg-white px-6 pt-20 pb-32 flex flex-col items-center justify-center"
       style={{
         background: 'radial-gradient(circle at center, #FEFCF4 40%, #A74D08 100%)',
       }}
